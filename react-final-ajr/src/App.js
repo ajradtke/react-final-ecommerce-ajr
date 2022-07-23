@@ -4,7 +4,7 @@ import ProductFetch from './ProductFetch';
 function App() {
   return (
     <div className="App">
-      Test text
+      Test text - additional test text
       <ProductFetch />
     </div> 
   );
