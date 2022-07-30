@@ -6,3 +6,7 @@ img {
 li {
     width: 200px;
 }
+
+ul {
+    list-style: none;
+}
