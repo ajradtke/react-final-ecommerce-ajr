@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import './productFetch.module.css';
 import { Link } from 'react-router-dom';
-import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 
 const ProductFetch = () => {
     const [products, setProducts] = useState([]);
@@ -29,7 +27,7 @@ const ProductFetch = () => {
                     {products.map(product => (
                         <li className="listitem" key={product.id}>
                             <img src={product.image} alt={product.title}></img><br />
-                            {product.title}<br />
+                            <Link to={`/products/${product.id}`}>{product.title}</Link> <br />
                             {product.price}<br />
                         </li>
                         
