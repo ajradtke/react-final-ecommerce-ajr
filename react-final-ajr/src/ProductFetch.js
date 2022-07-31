@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import './productFetch.module.css';
 import { Link } from 'react-router-dom';
+import CartContext from './CartContext';
 
 const ProductFetch = () => {
+
     const [products, setProducts] = useState([]);
     
     const fetchData = async () => {
@@ -28,7 +30,7 @@ const ProductFetch = () => {
                         <li className="listitem" key={product.id}>
                             <img src={product.image} alt={product.title}></img><br />
                             <Link to={`/products/${product.id}`}><h5>{product.title}</h5></Link> <br />
-                            <h6>{product.price}</h6><br />
+                            <h6>{product.price}</h6>
                         </li>
                         
 

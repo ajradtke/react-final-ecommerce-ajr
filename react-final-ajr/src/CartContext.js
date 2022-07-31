@@ -7,8 +7,10 @@ export function CartProvider({ children }) {
 
     const [items, setItems] = useState([]);
 
-    const addToCart = (title, price, image) => {
-        setItems((prevState) => [...prevState, { title, price, image}]);
+    console.log(items);
+
+    const addToCart = (title, price, description, image, id) => {
+        setItems((prevState) => [...prevState, { title, price, description, image, id }]);
     }
 
     return(
