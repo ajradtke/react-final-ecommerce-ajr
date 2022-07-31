@@ -27,8 +27,8 @@ const ProductFetch = () => {
                     {products.map(product => (
                         <li className="listitem" key={product.id}>
                             <img src={product.image} alt={product.title}></img><br />
-                            <Link to={`/products/${product.id}`}>{product.title}</Link> <br />
-                            {product.price}<br />
+                            <Link to={`/products/${product.id}`}><h5>{product.title}</h5></Link> <br />
+                            <h6>{product.price}</h6><br />
                         </li>
                         
 
