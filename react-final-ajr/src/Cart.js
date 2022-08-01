@@ -8,6 +8,8 @@ const Cart = () => {
 
     const {items} = useContext(CartContext);
 
+    console.log(items);
+
     return (
         <div>
             <h1>Cart Page</h1>
