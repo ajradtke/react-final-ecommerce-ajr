@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <CartProvider>
+        <CartProvider >
           <Nav />
           <Routes>
             <Route path="/products" element={<ProductFetch />} />

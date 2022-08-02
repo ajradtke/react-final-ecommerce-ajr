@@ -30,10 +30,10 @@ const ProductDetails = () => {
             <h4>{item.category}</h4>
             <h4>{item.description}</h4>
             <form>
-                <input type='number' placeholder='1' id='numInput'></input>
+                <input type='number' placeholder='0' min='0' max='10' id='numInput'></input>
             </form>
             <button onClick={() => {
-                const numInput = parseInt(document.getElementById("numInput").value);
+                const numInput = parseInt(document.getElementById("numInput").value)
                 addToCart(item.description, item.id, item.image, item.price, item.title, item.quantity = numInput );
                 }}>
                     Add To Cart</button><br />
