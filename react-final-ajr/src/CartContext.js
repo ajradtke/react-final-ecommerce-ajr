@@ -15,12 +15,8 @@ export function CartProvider({ children }) {
         
     }
 
-    const removeFromCart = (item) => {
-        const removedItem = items.splice(item.key-1, 0)
-    }
-
     return(
-        <CartContext.Provider value={{items, setItems, addToCart, removeFromCart}}>
+        <CartContext.Provider value={{items, setItems, addToCart}}>
             {children}
         </CartContext.Provider>
     )
