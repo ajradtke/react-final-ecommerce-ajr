@@ -23,10 +23,10 @@ function reducer(state, action) {
 };
 
     return (
-        <div>
-            <h1>Nav Header</h1>
-            <Link to="/products"><h4>Products</h4></Link>
-            <Link to="/cart"><h4><i class="fa-solid fa-cart-shopping fa-2xl"></i>Cart({items.length})</h4></Link>
+        <div className="d-flex justify-content-around p-3 bg-secondary w-100 text-white">
+            <h3>Nav Header</h3>
+            <Link style={{textDecoration: 'none'}} to="/products" className="text-white"><h4>Products</h4></Link>
+            <Link style={{textDecoration: 'none'}} to="/cart" className="text-white"><h4><i class="fa-solid fa-cart-shopping fa-2xl"></i>Cart({items.length})</h4></Link>
         </div>
     )
 }

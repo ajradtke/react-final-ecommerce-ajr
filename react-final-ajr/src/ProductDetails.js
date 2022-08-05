@@ -23,21 +23,23 @@ const ProductDetails = () => {
     },[]);
 
     return (
-        <div>
+        <div className="container m-3 border shadow p-3">
             <img src={item.image} alt=""></img>
             <h1>{item.title}</h1>
             <h4>${item.price}</h4>
             <h4>{item.category}</h4>
-            <h4>{item.description}</h4>
+            <div className="container">
+                <h4>{item.description}</h4>
+            </div>
             <form>
-                <input type='number' placeholder='0' min='0' max='10' id='numInput'></input>
+                <input className="rounded m-2" type='number' placeholder='0' min='0' max='10' id='numInput'></input>
             </form>
-            <button onClick={() => {
+            <button className="rounded m-2" onClick={() => {
                 const numInput = parseInt(document.getElementById("numInput").value)
                 addToCart(item.description, item.id, item.image, item.price, item.title, item.quantity = numInput );
                 }}>
                     Add To Cart</button><br />
-            <Link to="/products"><button>Return to Catalog</button></Link>
+            <Link to="/products"><button className="rounded m-2">Return to Catalog</button></Link>
         </div>
         
     )

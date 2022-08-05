@@ -21,22 +21,24 @@ const ProductFetch = () => {
 
     return (
         
-        <div className="box">
-            <h1>Product Fetch Page</h1>
+        <div>
+            <h1>Product Page</h1>
             <>
-            {products.length > 0 && (
-                <ul>
-                    {products.map(product => (
-                        <li className="listitem" key={product.id}>
-                            <img src={product.image} alt={product.title}></img><br />
-                            <Link to={`/products/${product.id}`}><h5>{product.title}</h5></Link> <br />
-                            <h6>{product.price}</h6>
-                        </li>
-                        
+            <div className="container d-flex justify-content-center">
+                {products.length > 0 && (
+                    <ul className="d-flex flex-wrap justify-content-center">
+                        {products.map(product => (
+                            <li className="listitem p-3 border shadow m-1 rounded" key={product.id}>
+                                <img src={product.image} alt={product.title}></img><br />
+                                <Link to={`/products/${product.id}`}><h5>{product.title}</h5></Link> <br />
+                                <h6>{product.price}</h6>
+                            </li>
+                            
 
-                    ))}
-                </ul>
-            )}
+                        ))}
+                    </ul>
+                )}
+            </div>
             </>
         </div>
         

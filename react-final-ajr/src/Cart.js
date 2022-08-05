@@ -16,22 +16,23 @@ const Cart = () => {
 
     return (
         <div>
-            <h1>Cart Page</h1>
-            {items.map(item => (
-                        <li className="listitem" key={item.id}>
-                            <img src={item.image}></img>
-                            <h6>{item.title}</h6><br />
-                            <h6>{item.price}</h6>
-                            <h6>Quantity: {item.quantity}</h6>
-                            <button onClick={() => {
-                                remove(item)
-                            }}>Remove From Cart</button>
-                        </li>
-                        
+            <h1 className="m-3">Cart Page</h1>
+            <div className="container d-flex justify-content-center m-3">
+                {items.map(item => (
+                            <li className="listitem p-3 border shadow m-1 rounded" key={item.id}>
+                                <img src={item.image}></img>
+                                <h6>{item.title}</h6><br />
+                                <h6>{item.price}</h6>
+                                <h6>Quantity: {item.quantity}</h6>
+                                <button onClick={() => {
+                                    remove(item)
+                                }}>Remove From Cart</button>
+                            </li>
+                            
 
-                    ))}
-
-            <Link to="/checkout"><h4><i class="fa-solid fa-cart-shopping fa-2xl"></i>Checkout</h4></Link>
+                        ))}
+            </div>
+            <Link to="/checkout"><h4 className="m-5"><i class="fa-solid fa-cart-shopping fa-2xl"></i>Checkout</h4></Link>
         </div>
     )
 };
